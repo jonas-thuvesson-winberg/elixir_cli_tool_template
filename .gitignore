@@ -24,3 +24,5 @@ elixir_cli_tool_template-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+elixir_cli_tool_template
