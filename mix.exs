@@ -7,7 +7,9 @@ defmodule ElixirCliToolTemplate.MixProject do
       version: "0.1.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      escript: [main_module: ElixirCliToolTemplate],
+      aliases: aliases()
     ]
   end
 
@@ -15,6 +17,12 @@ defmodule ElixirCliToolTemplate.MixProject do
   def application do
     [
       extra_applications: [:logger]
+    ]
+  end
+
+  defp aliases do
+    [
+      build: "escript.build"
     ]
   end
 
